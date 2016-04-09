@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # Setup login
-mkdir ~\/.docker/
-openssl aes-256-cbc -K $encrypted_8219e3a8c0b5_key -iv $encrypted_8219e3a8c0b5_iv -in config.json.enc -out ~\/.docker/config.json -d
+mkdir ${HOME}\/.docker/
+openssl aes-256-cbc -K $encrypted_8219e3a8c0b5_key -iv $encrypted_8219e3a8c0b5_iv -in config.json.enc -out ${HOME}\/.docker/config.json -d
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
   echo "Deploying image to docker hub for master (latest)"
